@@ -30,7 +30,7 @@
                             <tbody>
                                 {% for b in books %}
                                 <tr>
-                                    <td><a href='book/{{b.id}}'> {{book.title}} </a></td>
+                                    <td><a href='/book/{{b.id}}'> {{book.title}} </a></td>
                                 </tr>
                                 {% endfor %}
                             </tbody>
@@ -53,7 +53,7 @@
                     <form action="/author/{{author.id}}" method="POST">
                         {% csrf_token %}
                             <select name="option" id="">
-                                {%for b in books %}
+                                {%for b in book %}
                                     <option value="{{b.id}}">{{b.title}}</option>
                                 {%endfor%}
                             </select>
